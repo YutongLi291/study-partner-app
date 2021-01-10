@@ -1,0 +1,15 @@
+<%- include('partials/header'); -%>
+
+<h1>
+  Browse for Study Partners!
+</h1>
+<ul>
+    <% people.forEach(function(person) { %>
+        <li>
+            <strong><%= person.name %></strong>
+            is taking <%= person.courses[0]  %>
+        </li>
+    <% }); %>
+</ul>
+
+<%- include('partials/footer'); -%>
