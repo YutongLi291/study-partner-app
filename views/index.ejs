@@ -1,9 +1,49 @@
 <%- include('partials/header'); -%>
 
+<h2>CPSC 213</h2>
 <h1>
-  Index page
+  Find Your Study Partner
 </h1>
-<p>
-  Welcome to express driven web page
-</p>
+
+<div class="grid">
+    <div class="cbtn"><button class="btn">View all students</button></div>
+    <div class="cbtn"><button class="btn">Sign up/Sign in</button></div>
+</div>
+
+<style>
+body{
+    background-color: #FFF6E8;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". 
+}
+.cbtn{
+    justify-self: center;
+}
+.btn {
+    width: 200px;
+    height: 40px;
+    background-color: #FFA68A;
+    font-family: 'Courier New';
+}
+h1 {
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 60px;
+    text-transform: uppercase;
+}
+h2 {
+    text-align: center;
+    font-family: 'Courier New';
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-top: 70px;
+}
+</style>
+
+
+
 <%- include('partials/footer'); -%>
