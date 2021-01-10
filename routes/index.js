@@ -27,12 +27,13 @@ router.get('/browse', function(req, res, next) {
   router.get('/signup', function(req, res, next) {
     res.render('signup', { title: 'Sign Up' });
   });
-  router
+
 
   //added by yuka
-  router.get('/my-profile', function(req, res, next) {
+  router.get('/profile', function(req, res, next) {
     res.render('profile', { title: 'My Profile' });
   });
 
+  router
 
 module.exports = router;

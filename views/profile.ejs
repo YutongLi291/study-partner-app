@@ -1,109 +1,71 @@
 <%- include('partials/header'); -%>
-<span style="font-family:'Courier New';">
+
 <div class="hgrid">
     <div>
         <h2>CPSC 213</h2>
-        <h1>Find Your Study Partner</h1>
-        <h3>View All Students</h3>
-    </div>
-    <div style="justify-self: end">
-        <button class="button">My Profile</button>
+        <h1>Sign In</h1>
     </div>
 
-    <div class="lgrid">
-        <div style="padding:10px;"><input style="border-style:none;" type="text" value="Search Courses"></div>
-        <div>
-            <p style="padding-left:10px;">Filters<br></p>
-            <p style="padding-left:10px;">
-                <strong>Other courses taken/taking</strong><br>
-                <p style="margin-left:20px;">(Insert checkboxes using javascript)<br>
-                [] CPSC 110<br>
-                [] CPSC 210<br>
-                [] CPSC 221<br>
-                </p>
-            </p>
-            <p style="padding-left:10px;">
-                <strong>Degrees</strong><br>
-                <p style="padding-left:10px;">
-                [] Computer science<br>
-                [] Combined computer science and math<br>
-                [] Combined computer science and statistics<br>
-                [] Combined computer science and physics<br>
-                [] Computer engineering<br>
-                </p>
-            </p>
+    <div class="mgrid">
+        <center><h3>Sign In</h3></center>
+        <div class="background">
+            <center><div class="form-group"><input type="text" value="Username"></div></center>
+            <center><div class="form-group"><input type="text" value="Password"></div></center>
+            <center><button class="button">
+                Sign In
+            </button></center>
+            <p>&nbsp;</p>
+            <center><h3>-----------Or-----------</h3></center>
+            <center><h4>Create a new account:</h4></center>
+            <p>&nbsp;</p>
+            <center><button class="button">
+                Sign Up!
+            </button></center>
         </div>
-    </div>
-
-    <div class="rgrid">
-        <% people.forEach(function(person) { %>
-            <div class="prof">
-                <div class="grid">
-                    <div style="margin-left:50px;margin-top:15px;width:75px;height:75px;border-radius: 50%;background:black;"></div>
-                    <div>
-                        <p style="padding-top:20px;font-size:30px;"><%= person.name %></p>
-                        <p>Degree</p>
-                    </div>
-                </div>
-                <div>
-                    <p style="margin-left:20px;"><strong>Other courses taken/taking</strong><br>
-                    <%= person.courses.sort().join(', ')  %></p>
-                    <p style="margin-left:20px;"><strong>Contact me:</strong><br>
-                    Email: </p>
-                </div>
-            </div>
-        <% }); %>
     </div>
 
 </div>
 
-</span>
 <style>
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.prof{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    background-color: #ffffff;
-    padding: 10px;
-    background-clip: content-box;
-    overflow: scroll;
-}
 .button{
     background-color: #FFA68A;
     padding: 15px 32px;
     font-family: 'Courier New';
     text-transform: uppercase;
 }
+.tab{
+    margin-left: 20px;
+}
+p{
+    padding-left: 20px;
+    padding-top: 20px;
+}
 input{
     width: 90%;
-    padding: 12px;
+    padding: 12px 20px;
 }
 .hgrid{
     display: grid;
-    grid-template-columns: 30% 1fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-columns: 30% 1fr 30%;
+    grid-template-rows: 150px 500px;
 }
-.lgrid{
+.mgrid{
     display: grid;
-    grid-template-rows: 60px 440px;
+    grid-template-rows: 150px 500px;
     grid-template-columns: 1fr;
     background-color: #FFE7DF;
-    padding-right: 20px;
-    background-clip: content-box;
 }
-.lgrid div:nth-child(even) {
+.background{
     background-color: #FFE7DF;
 }
-.rgrid{
+
+.centergrid{
     display: grid;
-    grid-template-rows: 250px 250px;
-    grid-template-columns: 1fr 1fr;
-    background-color: #ffe7df;
+    grid-template-rows: 150px 165px;
+    grid-template-columns: 40% 1fr 40%;
+    background-color: #FFE7DF;
 }
+
 h1 {
     font-family: 'Courier New';
     font-size: 25px;
@@ -117,13 +79,18 @@ h2 {
     font-size: 20px;
 }
 h3 {
-    text-align: left;
+    text-align: center;
     font-family: 'Courier New';
     font-size: 35px;
-    font-weight: bold;
     text-transform: uppercase;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+h4 {
+    text-align: center;
+    font-family: 'Courier New';
+    text-transform: uppercase;
+    font-size: 20px;
 }
 </style>
 <%- include('partials/footer'); -%>
