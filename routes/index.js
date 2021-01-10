@@ -24,6 +24,9 @@ router.get('/browse', function(req, res, next) {
   router.get('/signin', function(req, res, next) {
     res.render('signin', { title: 'Sign In' });
   });
+  router.get('/signup', function(req, res, next) {
+    res.render('signup', { title: 'Sign Up' });
+  });
   router
 
 
