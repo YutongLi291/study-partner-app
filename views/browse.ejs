@@ -45,7 +45,12 @@
                         <p>Degree</p>
                     </div>
                 </div>
-                <div> <%= person.courses.sort().join(', ')  %> </div>
+                <div>
+                    <p style="margin-left:20px;"><strong>Other courses taken/taking</strong><br>
+                    <%= person.courses.sort().join(', ')  %></p>
+                    <p style="margin-left:20px;"><strong>Contact me:</strong><br>
+                    Email: </p>
+                </div>
             </div>
         <% }); %>
     </div>
