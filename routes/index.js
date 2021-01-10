@@ -21,7 +21,7 @@ router.get('/browse', function(req, res, next) {
   
   // Below are added by yingqi01
 
-  router.get('signin', function(req, res, next) {
+  router.get('/signin', function(req, res, next) {
     res.render('signin', { title: 'Sign In' });
   });
   router
