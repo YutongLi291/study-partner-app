@@ -1,5 +1,5 @@
 <%- include('partials/header'); -%>
-
+<span style="font-family:'Courier New';">
 <div class="hgrid">
     <div>
         <h2>CPSC 213</h2>
@@ -11,7 +11,7 @@
     </div>
 
     <div class="lgrid">
-        <div class="search"><input type="text" value="Search Courses"></div>
+        <div style="padding:10px;"><input style="border-style:none;" type="text" value="Search Courses"></div>
         <div>
             <p>Filters<br></p>
             <p>
@@ -46,6 +46,7 @@
 
 </div>
 
+</span>
 <style>
 .button{
     background-color: #FFA68A;
@@ -63,7 +64,7 @@ p{
 }
 input{
     width: 90%;
-    padding: 12px 20px;
+    padding: 12px;
 }
 .hgrid{
     display: grid;
@@ -72,7 +73,7 @@ input{
 }
 .lgrid{
     display: grid;
-    grid-template-rows: 50px 450px;
+    grid-template-rows: 60px 450px;
     grid-template-columns: 1fr;
     background-color: #FFE7DF;
 }
@@ -81,10 +82,9 @@ input{
 }
 .rgrid{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 450px 450px;
     background-color: #FFF3DF;
-    bac
 }
 h1 {
     font-family: 'Courier New';
