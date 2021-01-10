@@ -18,4 +18,14 @@ router.get('/browse', function(req, res, next) {
         console.log(err)
     }
   });
+  
+  // Below are added by yingqi01
+
+  router.get('/', function(req, res, next) {
+    res.render('signin', { title: 'Sign In' });
+  });
+  router
+
+
+
 module.exports = router;
