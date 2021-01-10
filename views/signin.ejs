@@ -8,10 +8,14 @@
 
 
     <div class="mgrid">
-        <h2>Sign In</h2>
+        <div class="centergrid">
+            <h2>Sign In</h2>
+        </div> class="centergrid">
         <div class="form-group"><input type="text" value="Username"></div>
         <div class="form-group"><input type="text" value="Password"></div>
-        <h2>Or</h2>
+        <div class="centergrid">
+            <h2>Or</h2>
+        </div> class="centergrid">
     </div>
 
 
@@ -51,13 +55,18 @@ input{
 }
 .mgrid{
     display: grid;
-    grid-template-rows: 150px 450px;
+    grid-template-rows: 150px 200px;
     grid-template-columns: 1fr;
     background-color: #FFE7DF;
 }
-.mgrid div:nth-child(even) {
+
+.centergrid{
+    display: grid;
+    grid-template-rows: 150px 250px;
+    grid-template-columns: 1fr;
     background-color: #FFE7DF;
 }
+
 h1 {
     font-family: 'Courier New';
     font-size: 25px;
