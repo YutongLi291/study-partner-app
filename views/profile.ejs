@@ -1,35 +1,39 @@
 <%- include('partials/header'); -%>
-
-<div class="hgrid">
+<span style="font-family:'Courier New';">
+<div class="grid">
     <div>
         <h2>CPSC 213</h2>
-        <h1>Sign In</h1>
+        <h1>Find Your Study Partner</h1>
+        <h3>My Profile</h3>
+    </div>
+    <div></div>
+    <div>
+        <p style="font-size: 20px;"><strong>Edit your profile:</strong></p>
+        <input style="border-style:none;margin-left:20px;" type="text" value="Full name">
+        <input style="border-style:none;margin-left:20px;margin-top:20px;" type="text" value="Degree">
+        <p style="font-size: 20px;"><strong>Other courses taken:</strong></p>
+        <p style="margin-left:20px;">(Insert checkboxes using javascript)<br>
+                [] CPSC 110<br>
+                [] CPSC 210<br>
+                [] CPSC 221<br>
+        </p>
+    </div>
+    <div>
+        <p style="font-size: 20px;"><strong>Upload a photo of yourself:</strong></p>
+        <div style="margin-left:30px;width:100px;height:100px;border-radius: 50%;background:#ffffff;"></div>
+        <button class="button">Upload</button>
+
     </div>
 
-    <div class="mgrid">
-        <center><h3>Sign In</h3></center>
-        <div class="background">
-            <center><div class="form-group"><input type="text" value="Username"></div></center>
-            <center><div class="form-group"><input type="text" value="Password"></div></center>
-            <center><button class="button">
-                Sign In
-            </button></center>
-            <p>&nbsp;</p>
-            <center><h3>-----------Or-----------</h3></center>
-            <center><h4>Create a new account:</h4></center>
-            <p>&nbsp;</p>
-            <center><button class="button">
-                Sign Up!
-            </button></center>
-        </div>
-    </div>
+
 
 </div>
-
+</span>
 <style>
 .button{
     background-color: #FFA68A;
-    padding: 15px 32px;
+    margin-top: 30px;
+    margin-left: 45px;
     font-family: 'Courier New';
     text-transform: uppercase;
 }
@@ -44,25 +48,12 @@ input{
     width: 90%;
     padding: 12px 20px;
 }
-.hgrid{
+.grid{
     display: grid;
-    grid-template-columns: 30% 1fr 30%;
-    grid-template-rows: 150px 500px;
-}
-.mgrid{
-    display: grid;
-    grid-template-rows: 150px 500px;
-    grid-template-columns: 1fr;
-    background-color: #FFE7DF;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 300px 300px;
 }
 .background{
-    background-color: #FFE7DF;
-}
-
-.centergrid{
-    display: grid;
-    grid-template-rows: 150px 165px;
-    grid-template-columns: 40% 1fr 40%;
     background-color: #FFE7DF;
 }
 
@@ -79,18 +70,13 @@ h2 {
     font-size: 20px;
 }
 h3 {
-    text-align: center;
+    text-align: left;
     font-family: 'Courier New';
     font-size: 35px;
+    font-weight: bold;
     text-transform: uppercase;
     padding-top: 20px;
     padding-bottom: 20px;
-}
-h4 {
-    text-align: center;
-    font-family: 'Courier New';
-    text-transform: uppercase;
-    font-size: 20px;
 }
 </style>
 <%- include('partials/footer'); -%>
