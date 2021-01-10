@@ -6,8 +6,8 @@
 </h1>
 
 <div class="grid">
-    <div><button class="btn">View all students</button></div>
-    <div><button class="btn">Sign up/Sign in</button></div>
+    <div class="cbtn"><button class="btn">View all students</button></div>
+    <div class="cbtn"><button class="btn">Sign up/Sign in</button></div>
 </div>
 
 <style>
@@ -18,12 +18,8 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.grid div:nothing-child(even) {
-    position: absolute;
-    right: 0px;
-}
-.grid div:nothing-child(odd) {
-    float: left;
+.cbtn{
+    justify-self: center;
 }
 .btn {
     width: 200px;
