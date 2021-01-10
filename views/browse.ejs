@@ -37,9 +37,9 @@
 
     <div class="rgrid">
         <% people.forEach(function(person) { %>
-            <div>
-                <strong><%= person.name %></strong>
-                is taking <%= person.courses.sort().join(', ')  %>
+            <div class="prof">
+                <div> <%= person.name %> </div>
+                <div> <%= person.courses.sort().join(', ')  %> </div>
             </div>
         <% }); %>
     </div>
@@ -48,12 +48,22 @@
 
 </span>
 <style>
+.prof{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    background-color: #FFE7DF;
+    padding: 10px;
+    backgound-clip: content-box;
+}
+.prof div:nth-child(even) {
+    background-color: #ffffff;
+}
 .button{
     background-color: #FFA68A;
     padding: 15px 32px;
     font-family: 'Courier New';
     text-transform: uppercase;
-
 }
 input{
     width: 90%;
@@ -78,8 +88,13 @@ input{
 .rgrid{
     display: grid;
     grid-template-rows: 250px 250px;
-    grid-template-columns: 450px 450px;
-    background-color: #FFF3DF;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FFE7DF;
+}
+.rgrid div {
+    background-color: #ffffff;
+    padding-right: 20px;
+    background-clip: content-box;
 }
 h1 {
     font-family: 'Courier New';
