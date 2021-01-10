@@ -1,5 +1,5 @@
 <%- include('partials/header'); -%>
-
+<span style="font-family:'Courier New';">
 <div class="hgrid">
     <div>
         <h2>CPSC 213</h2>
@@ -11,20 +11,20 @@
     </div>
 
     <div class="lgrid">
-        <div class="search"><input type="text" value="Search Courses"></div>
+        <div style="padding:10px;"><input style="border-style:none;" type="text" value="Search Courses"></div>
         <div>
-            <p>Filters<br></p>
-            <p>
+            <p style="padding-left:10px;">Filters<br></p>
+            <p style="padding-left:10px;">
                 <strong>Other courses taken/taking</strong><br>
-                <p class="tab">(Insert checkboxes using javascript)<br>
+                <p style="margin-left:20px;">(Insert checkboxes using javascript)<br>
                 [] CPSC 110<br>
                 [] CPSC 210<br>
                 [] CPSC 221<br>
                 </p>
             </p>
-            <p>
+            <p style="padding-left:10px;">
                 <strong>Degrees</strong><br>
-                <p class="tab">
+                <p style="padding-left:10px;">
                 [] Computer science<br>
                 [] Combined computer science and math<br>
                 [] Combined computer science and statistics<br>
@@ -46,6 +46,7 @@
 
 </div>
 
+</span>
 <style>
 .button{
     background-color: #FFA68A;
@@ -54,16 +55,9 @@
     text-transform: uppercase;
 
 }
-.tab{
-    margin-left: 20px;
-}
-p{
-    padding-left: 20px;
-    padding-top: 20px;
-}
 input{
     width: 90%;
-    padding: 12px 20px;
+    padding: 12px;
 }
 .hgrid{
     display: grid;
@@ -72,19 +66,20 @@ input{
 }
 .lgrid{
     display: grid;
-    grid-template-rows: 50px 450px;
+    grid-template-rows: 60px 440px;
     grid-template-columns: 1fr;
     background-color: #FFE7DF;
+    padding-right: 20px;
+    background-clip: content-box;
 }
 .lgrid div:nth-child(even) {
     background-color: #FFE7DF;
 }
 .rgrid{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 450px 450px;
     background-color: #FFF3DF;
-    bac
 }
 h1 {
     font-family: 'Courier New';
