@@ -11,6 +11,7 @@ router.get('/browse', function(req, res, next) {
         { name: 'Yutong', courses: ["CPSC340"]},
         { name: 'Yingqi', courses: ["MATH320", "CPSC340" ]},
         { name: 'Duy', courses: ["CPSC310"]}
+        { name: 'test', courses: ["MUSC101"]}
     ];
     try{
     res.render('browse', { title: 'Browse' , people: people});}
