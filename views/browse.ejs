@@ -1,13 +1,14 @@
 <%- include('partials/header'); -%>
-
+<span>
 <h1>
-  Browse for Study Partners!
+  Find Your Study Partner   <button style="float:right">My Profile</button>
 </h1>
+</span>
 <ul>
     <% people.forEach(function(person) { %>
         <li>
             <strong><%= person.name %></strong>
-            is taking <%= person.courses[0]  %>
+            is taking <%= person.courses.sort().join(', ')  %>
         </li>
     <% }); %>
 </ul>
