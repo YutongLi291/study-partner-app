@@ -18,7 +18,4 @@ router.get('/browse', function(req, res, next) {
         console.log(err)
     }
   });
-router.get('/test', function(req, res, next) {
-    res.render('test', { title: 'Express' });
-});
 module.exports = router;
